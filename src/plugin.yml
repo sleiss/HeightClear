@@ -1,0 +1,10 @@
+name: HeightClear
+version: 1.0
+main: de.ghac.heightclear.HeightClear
+author: ghac
+website: www.ghac.de
+commands:
+  heightclear:
+    description: 'Information about HeightClear plugin'
+    usage: /<command>
+    aliases: [hc]
