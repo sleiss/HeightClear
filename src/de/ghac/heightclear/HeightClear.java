@@ -1,6 +1,7 @@
 package de.ghac.heightclear;
 
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -8,6 +9,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -48,5 +50,11 @@ public class HeightClear extends JavaPlugin implements Listener{
     public void clearInv(Player p){
         PlayerInventory inv = p.getInventory();
         inv.clear();
+        ItemStack air = new ItemStack(Material.AIR, 1);
+        inv.setBoots(air);
+        inv.setLeggings(air);
+        inv.setChestplate(air);
+        inv.setHelmet(air);
+        
     }
 }
